@@ -101,17 +101,14 @@ ul{
     gap : 0.5rem;
 }
 
-.completed-task-info{
+/* .completed-task-info{
     text-decoration:line-through;
-}
+} */
 
 input[type="checkbox"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
+
     appearance: none;
-    /* For iOS < 15 to remove gradient background */
     background-color: #fff;
-    /* Not removed via appearance */
     margin: 0;
 
     margin-top : 10px;
@@ -143,6 +140,10 @@ input[type="checkbox"] {
     transform: scale(1);
   }
 
+  input[type="checkbox"]:checked + p{
+    text-decoration:line-through;
+  }
+
 @media only screen and (max-width: 1200px){
     .tasks-info{
         display: flex;
@@ -151,10 +152,6 @@ input[type="checkbox"] {
 
         gap : 1rem;
     }
-}
-
-@media only screen and (max-width: 700px){
-
 }
 
 @media only screen and (max-width: 700px){
@@ -189,15 +186,15 @@ input[type="checkbox"] {
     }
 
     input[type="checkbox"]{
-        width : 30px;
-        height : 15px;
+        width : 2rem;
+        height : 0.9rem;
     }
 }
 
 @media only screen and (max-width: 600px){
     input[type="checkbox"]{
-        width : 25px;
-        height : 12.5px;
+        width : 2rem;
+        height : 0.8rem;
     }
 }
 
